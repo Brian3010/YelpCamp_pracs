@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate') %>
+<div class="flex-container">
+    <div class="alert alert-danger flex-shrink-1" role="alert">
+        <h4 class="alert-heading text-center"><%= AppError.message %></h4>
+        <hr>
+        <% if (process.env.ENV !== "production") { %>
+        <p class="mb-0 err-details"><%= AppError.stack %></p>
+        <% } %>
+    </div>
+</div>
+
+<style>
+    .flex-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .flex-container div {
+        width: 60%;
+    }
+
+    .err-details {
+        width: 100%;
+    }
+</style>
