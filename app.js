@@ -53,8 +53,9 @@ const helmet = require("helmet");
 //     .catch((err) => {
 //         console.log("Mongo error: ", err);
 //     });
-const db_URL =
-    process.env.MONGO_DB_URL || "mongodb://127.0.0.1:27017/yelp-camp";
+// const db_URL =
+//     process.env.MONGO_DB_URL || "mongodb://127.0.0.1:27017/yelp-camp";
+const db_URL = process.env.MONGO_DB_URL;
 // const db_URL = "mongodb://127.0.0.1:27017/yelp-camp";
 // new approach 9/1/2023
 main()
