@@ -40,7 +40,7 @@ async function seedImage() {
 
 const seedDB = async () => {
     await Campground.deleteMany({});
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 80; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
         const randomPrice = Math.floor(Math.random() * 20 + 10);
         console.log(i);
