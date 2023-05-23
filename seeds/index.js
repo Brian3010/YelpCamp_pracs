@@ -4,8 +4,10 @@ const axios = require("axios");
 const cities = require("./cities");
 const { places, discriptors, descriptors } = require("./seedHelpers");
 
+const db_URL =
+    process.env.MONGO_DB_URL || "mongodb://127.0.0.1:27017/yelp-camp";
 mongoose.set("strictQuery", true);
-mongoose.connect("mongodb://127.0.0.1:27017/yelp-camp", {
+mongoose.connect(db_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
