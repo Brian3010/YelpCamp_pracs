@@ -71,7 +71,8 @@ const seedDB = async () => {
                     filename: "kitten-playing",
                 },
             ],
-            author: "643644362a6328518f283ea1",
+            // author: "643644362a6328518f283ea1",
+            author: "646b92a4c604749408021930", // seed using created user on atlas DB
         });
         await newCamp.save();
         // console.log(newCamp);
